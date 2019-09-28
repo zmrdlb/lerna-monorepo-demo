@@ -37,5 +37,10 @@ master: 采用 lerna 的 fixed mode。
 ## 基本使用
 
 1. 按照 lerna 官方文档说明，使用 `lerna init` 初始化 lerna 项目。如本 demo。
-2. 此处我新增了一个存放 package 的文件夹 zmrdlb-frame。设计思路是：
-    - zmrdlb-frame: 存放我的 Org-scoped package。这些将来被
+2. 此处我新增了一个存放 package 的文件夹 zmrdlb-frame，需要在 `lerna.json` 中配置。设计思路是：
+    - zmrdlb-frame: 存放我的 Org-scoped package，定义前端业务框架。这些将来被发布到 npm。
+    - packages: lerna 默认生成的存放 packages 的文件夹，此处放具体的项目，不发布到 npm。
+3. 新增核心库 @zmrdlb-frame/lib，定义各种实用小工具，不包括 ui: `lerna create @zmrdlb-frame/lib zmrdlb-frame`.
+4. 新增组件库 @zmrdlb-frame/component，定义各种同 Web component 的，包含 ui 的通用业务组件：`lerna create @zmrdlb-frame/component zmrdlb-frame`
+5. 确定依赖关系，@zmrdlb-frame/component 依赖 @zmrdlb-frame/lib：`lerna add @zmrdlb-frame/lib --scope=@zmrdlb-frame/component`
+6. 新建项目 project-one：`lerna create project-one`
