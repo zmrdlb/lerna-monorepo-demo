@@ -1,0 +1,22 @@
+{
+  "name": "project-one",
+  "version": "0.0.0",
+  "description": "an project for testing lerna",
+  "author": "A88245 <lindam.zhang@arrowasia.com>",
+  "homepage": "https://github.com/zmrdlb/lerna-monorepo-demo#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmrdlb/lerna-monorepo-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zmrdlb/lerna-monorepo-demo/issues"
+  },
+  "dependencies": {
+    "@zmrdlb-frame/component": "^0.0.0"
+  }
+}
