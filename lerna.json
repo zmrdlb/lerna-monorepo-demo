@@ -1,0 +1,7 @@
+{
+  "packages": [
+    "packages/*",
+    "zmrdlb-frame/*"
+  ],
+  "version": "0.0.0"
+}
