@@ -4,7 +4,7 @@
   "description": "A core library of zmrdlb's frontend framework",
   "keywords": [],
   "author": "592044573@qq.com",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/zmrdlb/lerna-monorepo-demo/issues"
   },
-  "homepage": "https://github.com/zmrdlb/lerna-monorepo-demo#readme"
+  "homepage": "https://github.com/zmrdlb/lerna-monorepo-demo#readme",
+  "gitHead": "b855227de1c57488b412e4c11e82b4249611d82d"
 }

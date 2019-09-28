@@ -7,7 +7,7 @@
   ],
   "author": "A88245 <lindam.zhang@arrowasia.com>",
   "homepage": "https://github.com/zmrdlb/lerna-monorepo-demo#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -31,5 +31,6 @@
   },
   "dependencies": {
     "@zmrdlb-frame/lib": "^0.1.0"
-  }
+  },
+  "gitHead": "b855227de1c57488b412e4c11e82b4249611d82d"
 }

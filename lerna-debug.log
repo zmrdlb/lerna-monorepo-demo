@@ -1,0 +1,45 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   contents: 'zmrdlb-frame',
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '3.16.4',
+0 silly argv   '$0': 'lerna',
+0 silly argv   bump: 'from-package'
+0 silly argv }
+1 notice cli v3.16.4
+2 verbose rootPath /Users/A88245/Documents/mycode/lerna-monorepo-demo
+3 verbose session 08e9b173fd44fe1f
+4 verbose user-agent lerna/3.16.4/node@v12.2.0+x64 (darwin)
+5 verbose git-describe undefined => "v0.1.0-0-gb855227"
+6 silly git-describe parsed => {"lastTagName":"v0.1.0","lastVersion":"v0.1.0","refCount":"0","sha":"b855227","isDirty":false}
+7 silly getUnpublishedPackages
+8 warn Unable to determine published version, assuming "@zmrdlb-frame/component" unpublished.
+9 warn Unable to determine published version, assuming "@zmrdlb-frame/lib" unpublished.
+10 info publish Publishing packages to npm...
+11 info Verifying npm credentials
+12 verbose Retrieving npm user profile
+13 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 546ms
+14 silly npm profile get received {"tfa":false,"name":"zmrdlb","email":"592044573@qq.com","email_verified":true,"created":"2016-11-17T07:50:53.898Z","updated":"2019-09-28T07:13:30.365Z","cidr_whitelist":null}
+15 silly get npm username received {"username":"zmrdlb","tfa":false,"name":"zmrdlb","email":"592044573@qq.com","email_verified":true,"created":"2016-11-17T07:50:53.898Z","updated":"2019-09-28T07:13:30.365Z","cidr_whitelist":null}
+16 silly verifyNpmPackageAccess
+17 http fetch GET 200 https://registry.npmjs.org/-/org/zmrdlb/package?format=cli 281ms
+18 info Checking two-factor auth mode
+19 verbose Retrieving npm user profile
+20 http fetch GET 200 https://registry.npmjs.org/-/npm/v1/user 367ms
+21 silly npm profile get received {"tfa":false,"name":"zmrdlb","email":"592044573@qq.com","email_verified":true,"created":"2016-11-17T07:50:53.898Z","updated":"2019-09-28T07:13:30.365Z","cidr_whitelist":null}
+22 silly 2FA false
+23 warn ENOLICENSE Packages project-one, @zmrdlb-frame/component, and @zmrdlb-frame/lib are missing a license.
+23 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+23 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+24 silly getCurrentSHA
+25 verbose getCurrentSHA b855227de1c57488b412e4c11e82b4249611d82d
+26 silly lifecycle No script for "prepublish" in "lerna-monorepo-demo", continuing
+27 silly lifecycle No script for "prepare" in "lerna-monorepo-demo", continuing
+28 silly lifecycle No script for "prepublishOnly" in "lerna-monorepo-demo", continuing
+29 silly lifecycle No script for "prepack" in "lerna-monorepo-demo", continuing
+30 verbose pack-directory zmrdlb-frame/lib/zmrdlb-frame
+31 silly lifecycle No script for "prepublish" in "@zmrdlb-frame/lib", continuing
+32 silly lifecycle No script for "prepare" in "@zmrdlb-frame/lib", continuing
+33 silly lifecycle No script for "prepublishOnly" in "@zmrdlb-frame/lib", continuing
+34 silly lifecycle No script for "prepack" in "@zmrdlb-frame/lib", continuing
+35 error
