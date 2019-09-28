@@ -1,6 +1,6 @@
 {
   "name": "@zmrdlb-frame/component",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a set of components with ui",
   "keywords": [
     "component"
@@ -30,6 +30,6 @@
     "url": "https://github.com/zmrdlb/lerna-monorepo-demo/issues"
   },
   "dependencies": {
-    "@zmrdlb-frame/lib": "^0.0.0"
+    "@zmrdlb-frame/lib": "^0.1.0"
   }
 }

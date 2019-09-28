@@ -1,6 +1,6 @@
 {
   "name": "project-one",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "an project for testing lerna",
   "author": "A88245 <lindam.zhang@arrowasia.com>",
   "homepage": "https://github.com/zmrdlb/lerna-monorepo-demo#readme",
@@ -17,6 +17,6 @@
     "url": "https://github.com/zmrdlb/lerna-monorepo-demo/issues"
   },
   "dependencies": {
-    "@zmrdlb-frame/component": "^0.0.0"
+    "@zmrdlb-frame/component": "^0.1.0"
   }
 }
