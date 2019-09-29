@@ -44,3 +44,58 @@ master: 采用 lerna 的 fixed mode。
 4. 新增组件库 @zmrdlb-frame/component，定义各种同 Web component 的，包含 ui 的通用业务组件：`lerna create @zmrdlb-frame/component zmrdlb-frame`
 5. 确定依赖关系，@zmrdlb-frame/component 依赖 @zmrdlb-frame/lib：`lerna add @zmrdlb-frame/lib --scope=@zmrdlb-frame/component`
 6. 新建项目 project-one：`lerna create project-one`
+7. 确定依赖关系，project-one 依赖 @zmrdlb-frame/component：`lerna add @zmrdlb-frame/component --scope=project-one`
+8. 以上3个新建的package, version 都是 0.0.0
+9. 运行 `lerna version`，但收到以下错误提示信息：
+``` bash
+lerna ERR! EUNCOMMIT Working tree has uncommitted changes, please commit or remove the following changes before continuing:
+```
+10. git 提交：git add, git commit
+
+> 注意当前在 fixed mode 下运行
+
+11. 再次运行 `lerna version`，根据提示选择 semver keyword 来确定 version:
+``` bash
+lerna notice cli v3.16.4
+lerna info current version 0.0.0
+lerna info Assuming all packages changed
+? Select a new version (currently 0.0.0) Minor (0.1.0)
+
+Changes:
+ - project-one: 0.0.0 => 0.1.0
+ - @zmrdlb-frame/component: 0.0.0 => 0.1.0
+ - @zmrdlb-frame/lib: 0.0.0 => 0.1.0
+
+? Are you sure you want to create these versions? Yes
+lerna info execute Skipping releases
+lerna info git Pushing tags...
+lerna success version finished
+```
+根据提示可看到，lerna 在 fixed mode 下运行 lerna version，假设所有 packages 更改，版本号全部更新。
+12. 运行 `git status`，发现 lerna version 已经执行了 `git push`，当然上述输出也有显示。
+13. 运行 `lerna publish`，发布 packages 到 npm。在运行此命令之前，请先运行 `npm login` 确认已经登录将要将包发布到的 npm registry。但运行后一直收到以下提示，并没有发布到npm。
+``` bash
+lerna notice Current HEAD is already released, skipping change detection.
+lerna success No changed packages to publish 
+```
+根据提示，难道是说，因为我运行过 `lerna version` 导致已经 released 了？这点没搞清楚，先解决当前的问题吧。根据官方文档，增加参数，运行
+`lerna publish from-package`，成功执行了 npm publish。
+``` bash
+Found 2 packages to publish:
+ - @zmrdlb-frame/component => 0.1.0
+ - @zmrdlb-frame/lib => 0.1.0
+? Are you sure you want to publish these packages? Yes
+Successfully published:
+ - @zmrdlb-frame/component@0.1.0
+ - @zmrdlb-frame/lib@0.1.0
+lerna success published 2 packages
+```
+
+**小插曲：** 在 publish 成功之前还遇到了以下情况：
+1. 提示待发布的 packages 缺少 LICENSE.md，按照提示新增 LICENSE.md.
+2. 由于我并不想将 project-one 发布到 npm registry，只想通过 git 来维护。那么在 project-one 的 package.json 里新增 private:true，npm publish 将不会发布此 package。
+14. 登录自己的npm registry 查看，@zmrdlb-frame/lib 和 @zmrdlb-frame/component 已经在我的 organization 里了。
+
+### 总结
+我本身对 lerna 也是摸索中，所以以下观点只是我的临时看法：
+1. 开发时，代码只需像平常一样只用 git 来维护就可以了。为了方便版本跟踪，每次运行 `lerna version` 来 git push。如果确定正式上线，需要将 packages 发版供外部使用，则再运行 `lerna publish`。
