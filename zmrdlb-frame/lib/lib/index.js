@@ -1,7 +1,3 @@
 'use strict';
 
-const DateFormat = require('../util/date-format');
-
-module.exports = {
-    DateFormat
-}
+exports.DateFormat = require('util/date-format');

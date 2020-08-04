@@ -1,7 +1,3 @@
 'use strict';
 
-const DatePicker = require('../date-picker')
-
-module.exports = {
-    DatePicker
-};
+exports.DatePicker = require('date-picker')
