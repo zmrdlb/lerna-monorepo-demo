@@ -1,10 +1,14 @@
-const Lib = require('@zmrdlb-frame/lib');
+"use strict";
 
-// 可以像这样，只引用单个需要的 module
-// const DateFormat = require('@zmrdlb-frame/lib/lib/util/date-format');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = DatePicker;
 
-module.exports = function() {
-    // 输出当前日期
-    var currentDateTime = Lib.DateFormat(Date.now(),'yyyy.MM.dd hh:mm:ss');
-    console.log(`当前日期时间是${currentDateTime}`);
+var _util = require("@zmrdlb-frame/lib/lib/util");
+
+function DatePicker() {
+  // 输出当前日期
+  var currentDateTime = (0, _util.dateFormat)(Date.now(), 'yyyy.MM.dd hh:mm:ss');
+  console.log("\u5F53\u524D\u65E5\u671F\u65F6\u95F4\u662F".concat(currentDateTime));
 }

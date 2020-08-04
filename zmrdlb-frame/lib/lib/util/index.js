@@ -5,11 +5,11 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "DatePicker", {
+Object.defineProperty(exports, "dateFormat", {
   enumerable: true,
   get: function get() {
-    return _datePicker["default"];
+    return _dateFormat["default"];
   }
 });
 
-var _datePicker = _interopRequireDefault(require("./date-picker"));
+var _dateFormat = _interopRequireDefault(require("./date-format"));
